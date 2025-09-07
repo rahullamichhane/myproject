@@ -1,0 +1,21 @@
+
+<style>
+    a{
+        text-decoration:none;
+    }
+</style>
+
+<h2> Login form </h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+        <p>{{ field.label }}: <br> {{ field }}</p>
+    {% endfor %}
+    <button type="submit">Login</button>
+</form>
+
+<p>Don't have an account? </p>
+<button type="button">
+    <a href="{% url 'register' %}">Signup</a>
+</button>

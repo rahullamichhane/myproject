@@ -1,0 +1,29 @@
+{% extends 'master_template.html' %}
+{% block userDetails %}
+{% if logged_in == True %}
+<h2 style="color: red">Hello {{manager}}</h2>
+
+{% comment "Listing out all the users" %} 
+{% endcomment %}
+{% with newname="hemanth" %}
+<ul>
+    {% for user in users  %}
+    <li style="color: {% cycle 'blue' 'purple' 'black' 'gray' 'green' 'red' %}"> {{ user.firstname|join:"-" }}  {{ user.lastname|cut:"a" }}</li>
+    {% endfor %}
+    {{users|length}}
+</ul> 
+{% endwith %}
+{% else %}
+<h1> User must be authenticated. Please login first</h1>
+{% endif %}
+{% endblock userDetails %}
+
+
+
+
+
+
+
+{% comment %} fancy template designed by UI dev/Frontend dev {% endcomment %}
+
+{% comment %} UI/UX designer {% endcomment %}

@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+My Group - All members
+{% endblock %}
+
+{% block content %}
+<h1>All Members</h1>
+<ul>
+    {% for x in mymembers %}
+      <li><a href="details/{{x.id}}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% endfor %}
+  </ul>
+
+<p>Back to home page <a href="/">Home</a></p>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+<style>
+    a{
+        text-decoration:none;
+    }
+    h2{
+        color: red;
+    }
+    .row{
+        margin-top: 60px;
+        margin-button:0px;
+        margin-left:40px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        {% block content %}
+    <br>
+    <div class="alert alert-success" role="alert">
+        <h2 style="text-align: center;">Logged out!</h2>
+    </div>
+
+    <h3>Login again?</h3>
+    <button type="button">
+    <a href="{% url 'login' %}"> Login</a> <br>
+    </button><br> <br>
+    <button type="button">
+    <a href="{% url 'home' %}"> home</a>
+    </button>
+{% endblock content %}
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+

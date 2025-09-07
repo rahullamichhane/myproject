@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inventory Section</title>
+</head>
+<body>
+    <ul>
+        {% for item in items  %}
+        <li> <h2>{{item.name}}</h2><h4>Price: ${{item.price}}</h4>
+        <h4>{{item.category}} Qty - {{item.stock_quantity}}</h4></li>
+        {% endfor %}
+        Total items: {{items|length}}
+      </ul> 
+</body>
+</html>
